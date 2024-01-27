@@ -1,0 +1,1567 @@
+
+
+import java.util.Scanner;
+
+public class Day2 {
+
+	public static void main(String[] args) {
+		
+	Scanner sc = new Scanner(System.in);
+	
+	System.out.println("Enter your age");
+	
+	int age = sc.nextInt();
+	
+	System.out.println("the entered age is "+age);
+	
+	
+		
+	}
+}
+
+//import java.util.Scanner;
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//	Scanner sc = new Scanner(System.in);
+//	
+//	System.out.println("Enter your name");
+//	
+//	String name = sc.nextLine();
+//	
+//	System.out.println("The name entered is "+name);
+//		
+//	}
+//}
+
+
+
+//class A {
+//	
+//	int i = 4;
+//	
+//	A( int i) {
+//		
+//		this.i = i;
+//		
+//	}
+//	
+//	
+//	A() {
+//		
+//	}
+//	
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//	A a = new A(10);
+//	
+//	System.out.println(a.i);
+//	
+//	A a2 = new A();
+//	System.out.println(a2.i);
+//		
+//	}
+//}
+
+
+//interface A {//you can have implemented methods in interface java 1.8 onwards and that i done with the
+//				//help of static or default keywords
+//	
+//	int i = 5;
+//	
+//	void add();
+//	
+//	default void sub() {
+//		
+//	}
+//	static void mul() {
+//		
+//	}
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		System.out.println(A.i);
+//		
+//	}
+//}
+
+
+//interface A {
+//	
+//	int i = 5;//you have to assign some value to interface  variable since it is public static and final...
+//	
+//	void add();
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		System.out.println(A.i);//I am accessing the interface variable by its name since variables in
+//								//interfaces are public, static and final...
+//		
+//	}
+//}
+
+
+
+//interface A {
+//	
+//	void add();
+//	void sub();	
+//}
+//interface B extends A {
+//	
+//	void mul();
+//}
+//
+//
+//class C implements B {
+//
+//	@Override
+//	public void mul() {
+//		
+//	}
+//
+//	@Override
+//	public void add() {
+//		
+//	}
+//
+//	@Override
+//	public void sub() {
+//		
+//	}
+//	
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		
+//	}
+//}
+
+
+//interface A {
+//	
+//	void add();
+//	void sub();	
+//}
+//interface B {
+//	
+//	void mul();
+//}
+//
+//
+//class C implements A, B {
+//
+//	@Override
+//	public void mul() {
+//		
+//	}
+//
+//	@Override
+//	public void add() {
+//		
+//	}
+//
+//	@Override
+//	public void sub() {
+//		
+//	}
+//	
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		
+//	}
+//}
+
+
+
+//interface A {//All your methods should be un-implemented, you can not create object of interface  but
+//				//you can object of its implementation in the reference variable of interface type... 
+//	
+//	void add();
+//	void sub();
+//	
+//}
+//
+//class B implements A {
+//
+//	@Override
+//	public void add() {
+//		System.out.println("insdie add of B");
+//	}
+//
+//	@Override
+//	public void sub() {
+//		System.out.println("inside sub of B");
+//	}	
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		B b = new B();
+//		b.add();    b.sub();
+//		
+//		//A a = new A();//This is illegal since interface can not be instantiated...
+//		A a = new B();//interface can not be instantiated but can hold the object of its implemenation
+//						//class...
+//	}
+//}
+
+
+
+
+//abstract class Car {
+//	
+//	void steringWheel() {
+//		System.out.println("inside steeringWheel()...");
+//	}
+//	
+//	abstract void ac();
+//	abstract void radio();
+//}
+//
+//abstract class Polo extends Car {
+//
+//	void ac() {
+//		
+//		System.out.println("inside AC of Polo...");
+//	}
+//	
+//}
+//
+//class PoloGT extends Polo {
+//
+//	@Override
+//	void radio() {
+//		
+//		System.out.println("inside radion of PoloGT...");
+//	}
+//	
+//	
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		PoloGT gt = new PoloGT();
+//		Polo polo = new PoloGT();
+//	}
+//}
+
+
+//abstract class Car {
+//	
+//	void steringWheel() {
+//		System.out.println("inside steeringWheel()...");
+//	}
+//	
+//	abstract void ac();
+//}
+//
+//class Polo extends Car {
+//
+//	void ac() {
+//		
+//		System.out.println("inside AC of Polo...");
+//	}	
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		Polo polo = new Polo();
+//		polo.steringWheel();   polo.ac();
+//		
+//		Car car = new Polo();//You can not have object of abstract class however, you can hold the
+//							//object of its implementation class in the reference variable of abstract 
+//							//class....
+//		
+//		
+//	}
+//}
+
+
+
+//abstract class Car {//Abstract is a keyword which is used with the class and with method...
+//					//abstract method says, you must not have body to method...
+//					//you can have implemented as well as  un-implemented method in the abstract class
+//					//and you can have all methods un-implemented in the abstract class...
+//					//you can have all the methods implemented yet the class is abstract
+//	void steringWheel() {
+//		System.out.println("inside steeringWheel()...");
+//	}
+//	
+//	void ac() {
+//		
+//	}
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		Car car = new Car();//You can not create object of abstract class...
+//		
+//		
+//	}
+//}
+
+
+
+
+//abstract class Car {//Abstract is a keyword which is used with the class and with method...
+//					//abstract method says, you must not have body to method...
+//					//you can have implemented as well as  un-implemented method in the abstract class
+//					//and you can have all methods un-implemented in the abstract class...
+//	
+//	void steringWheel() {
+//		System.out.println("inside steeringWheel()...");
+//	}
+//	
+//	abstract void ac();
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		Car car = new Car();//You can not create object of abstract class...
+//		
+//		
+//	}
+//}
+
+
+
+//
+//class Arithmetic {//here, in over-loading, method name must be same in a class and argument list 
+//				//must be different but return-type might change
+//	
+//	void add( int i, int j) {
+//		
+//		System.out.println( i+j );
+//	}
+//	
+//	void add( int i, int j, int k ) {
+//		System.out.println( i+j+k );
+//	}
+//	
+//	void add( double i, int j ) {
+//		
+//		System.out.println( i+j );
+//	}
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		
+//		Arithmetic arithmetic = new Arithmetic();
+//		
+//		arithmetic.add(10, 30);
+//		arithmetic.add(2, 4, 9);
+//		arithmetic.add(18.5, 45);
+//		
+//	}
+//}
+
+
+//class Swift {
+//	
+//	final int i = 10;//final variable can not be left un-initialized "final int i;" is not possible...
+//	
+//	
+//	void tyres() {
+//		i = 20;//you can not assign any new value to final variable...
+//		System.out.println("inside tyreso of Swift "+i);
+//	}
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		Car swift = new Swift();   swift.tyres();
+//		
+//	}
+//}
+
+
+
+//final class Car {
+//	
+//	void abc( ) {
+//		
+//	}
+//	void tyres() {
+//		System.out.println("inside tyres() of Car ");
+//	}
+//}
+//
+//class Swift extends Car {//here this is illegal since you can not extend the final class... 
+//	
+//	void steeringWheel() {
+//		
+//		System.out.println("inside steeringWheel() of Swift ");
+//	}
+//	
+//	void tyres() {
+//		System.out.println("inside tyreso of Swift ");
+//	}
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		Car swift = new Swift();   swift.tyres();
+//		
+//	}
+//}
+
+
+
+
+//class Car {
+//	
+//	void abc( ) {
+//		
+//	}
+//	final void tyres() {
+//		System.out.println("inside tyres() of Car ");
+//	}
+//}
+//
+//class Swift extends Car {
+//	
+//	void steeringWheel() {
+//		
+//		System.out.println("inside steeringWheel() of Swift ");
+//	}
+//	
+//	void tyres() {//here is illegal since I am trying to override the final method in parent class...
+//		System.out.println("inside tyreso of Swift ");
+//	}
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		Car swift = new Swift();   swift.tyres();
+//		
+//	}
+//}
+
+
+//class Car {
+//	
+//	void abc( ) {
+//		
+//	}
+//	void tyres() {//This is overridden method
+//		System.out.println("inside tyres() of Car ");
+//	}
+//}
+//
+//class Swift extends Car {
+//	
+//	void steeringWheel() {
+//		
+//		System.out.println("inside steeringWheel() of Swift ");
+//	}
+//	
+//	void tyres() {//This is overridding method....
+//		System.out.println("inside tyreso of Swift ");
+//	}
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		Car swift = new Swift();   swift.tyres();
+//		
+//	}
+//}
+
+
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//
+//		int arr[][] = { { 1, 1, 1 }, { 2, 2, 2 }, { 3, 3, 3 } };
+//
+//		int[][] newArr = new int[3][3];
+//
+//		for (int i = 0; i < arr.length; i++) {
+//
+//			for (int j = 0; j < arr.length; j++) {
+//
+//				newArr[j][i] = arr[i][j];
+//			}
+//			
+//		}
+//
+//		for (int i = 0; i < arr.length; i++) {
+//
+//			for (int j = 0; j < arr.length; j++) {
+//
+//				System.out.print(newArr[i][j]);	
+//			}
+//			System.out.println();
+//			
+//		}
+//	}
+//}
+
+//class Car {
+//	
+//	void tyres() {
+//		System.out.println("inside tyres() of Car ");
+//	}
+//}
+//
+//class Swift extends Car {
+//	
+//	void steeringWheel() {
+//		
+//		System.out.println("inside steeringWheel() of Swift ");
+//	}
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		Car car1 = new Car();    Car car2 = new Car();
+//		
+//		Swift swift1 = new Swift();  Swift swift2 = new Swift();   
+//		
+//		Car[] cars = { car1, swift1, car2, swift2 };
+//		
+//		for ( Car car : cars) {
+//			
+//			car.tyres();  
+//			
+//			if( car instanceof Car) {
+//				System.out.println("instance of Car");
+//			}
+//			
+//			if( car instanceof Swift) {
+//				
+//				Swift sw = (Swift) car;
+//				sw.steeringWheel();
+//			}
+//		}
+//		
+//	}
+//}
+
+//class Car {
+//
+//	void tyres() {
+//		System.out.println("inside tyres() of Car ");
+//	}
+//}
+//
+//class Swift extends Car {
+//
+//	void steeringWheel() {
+//
+//		System.out.println("inside steeringWheel() of Swift ");
+//	}
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//
+////		Car car1 = new Car();
+////		Swift swift1 = new Swift();
+////		Car car2 = new Swift();
+////		
+////		
+////		Car car3 = swift1;//Here I am assigning reference variable and is implicit type-casted since up-casting
+////							//is automatic...
+//		
+////		System.out.println(car3);
+////		System.out.println(swift1);
+////		System.out.println(car2);
+//
+//		
+//		
+//		
+//		System.out.println("Down casting................");
+//		
+//		Car car = new Swift();
+//		
+//		Swift swift1 = (Swift) car;//down-casting is not automatic...
+//		
+//		System.out.println(swift1);
+//		System.out.println(car);
+//
+//		
+//	}
+//}
+
+//class Car {
+//	
+//	void tyres() {
+//		System.out.println("inside tyres() of Car ");
+//	}
+//}
+//
+//class Swift extends Car {
+//	
+//	void steeringWheel() {
+//		
+//		System.out.println("inside steeringWheel() of Swift ");
+//	}
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		  
+//		Swift swift1 = new Swift();
+//		Swift swift2 = swift1;
+//		
+//		System.out.println(swift1);
+//		System.out.println(swift2);
+//			
+//	}
+//}
+
+//class Car {
+//	
+//	void tyres() {
+//		System.out.println("inside tyres() of Car ");
+//	}
+//}
+//
+//class Swift extends Car {
+//	
+//	void steeringWheel() {
+//		
+//		System.out.println("inside steeringWheel() of Swift ");
+//	}
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		Car car1 = new Car();    Car car2 = new Car();
+//		
+//		Swift swift1 = new Swift();  Swift swift2 = new Swift();   
+//		
+//		Car[] cars = { swift1, car1, car2, swift2 };
+//		
+//		for ( Car car : cars) {
+//			
+//			car.tyres();  
+//		}
+//		
+//	}
+//}
+
+//class Swift {
+//	
+//	int i = 4;
+//	
+//	void steeringWheel() {
+//		
+//		System.out.println("inside steeringWheel() of Swift ");
+//	}
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		Swift swift1 = new Swift();  Swift swift2 = new Swift();   Swift swift3 = new Swift();
+//		
+//		Swift swifts[] = { swift1, swift2, swift3 };
+//		
+//		swift1.i = 50;    swift3.i = 10;
+//		
+//		int sum = 0;
+//		
+//		for( Swift value : swifts ) {
+//		
+//			sum = sum + value.i;
+//		}
+//		
+//		System.out.println(sum);
+//		
+//	}
+//}
+
+//class Car {
+//	
+//	void tyres() {
+//		System.out.println("inside tyres() of Car ");
+//	}
+//}
+//
+//class Swift extends Car {
+//	
+//	void steeringWheel() {
+//		
+//		System.out.println("inside steeringWheel() of Swift ");
+//	}
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		Swift swift1 = new Swift();  Swift swift2 = new Swift();   Swift swift3 = new Swift();
+//		
+//		Swift swifts[] = { swift1, swift2, swift3 };
+//		
+//		for( Swift value : swifts ) {
+//			
+//			value.tyres();
+//			value.steeringWheel();
+//		}
+//		
+//	}
+//}
+
+//class Car {
+//	
+//	void tyres() {
+//		System.out.println("inside tyres() of Car ");
+//	}
+//}
+//
+//class Swift extends Car {
+//	
+//	void steeringWheel() {
+//		
+//		System.out.println("inside steeringWheel() of Swift ");
+//	}
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		Car c1 = new Car();    Car c2 = new Car();    Car c3 = new Car();
+//		
+//		Car[] cars = { c1, c2, c3 };
+//		
+//		for( int i = 0; i < cars.length; i++ ) {
+//			System.out.println( cars[i] );
+//			cars[i].tyres();
+//		}
+//		
+//	}
+//}
+
+//class Car {
+//	
+//	void tyres() {
+//		System.out.println("inside tyres() of Car ");
+//	}
+//}
+//
+//class Swift extends Car {
+//	
+//	void steeringWheel() {
+//		
+//		System.out.println("inside steeringWheel() of Swift ");
+//	}
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		Car car1 = new Car();
+//		Swift swift = new Swift();
+//		
+//		Car car2 = new Swift();    car2.tyres();   car2.steeringWheel();//This is illegal since I am 
+//					//trying to call method "SteeringWheel" on reference variable which is of Car type 
+//					//So It will look for "SteeringWheel" method in Car class and this "SteeringWheel"
+//					//i snot present in the Car class and it fails...This process is checked when you have
+//					//reference variable and object are of 2 diffrent types...
+//		
+//	}
+//}
+
+//class Car {
+//	
+//	int mileage = 4000;
+//	
+//	void tyres() {
+//		System.out.println("inside tyres() of Car "+mileage);
+//	}
+//}
+//
+//class Swift extends Car {
+//	
+//	int average = 15;
+//	int mileage = 2000;
+//	
+//	void steeringWheel() {
+//		int  mileage = 1000;
+//		System.out.println("inside steeringWheel() of Swift "+average+"  "+super.mileage);
+//	}
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		Car car = new Car();     car.tyres();   System.out.println(car.mileage);
+//		
+//		Swift swift = new Swift();  swift.steeringWheel();  swift.tyres();  System.out.println(swift.average);
+//		
+//		
+//	}
+//}
+
+//class Car {
+//	
+//	int mileage = 4000;
+//	
+//	void tyres() {
+//		System.out.println("inside tyres() of Car "+mileage);
+//	}
+//}
+//
+//class Swift extends Car {
+//	
+//	int average = 15;
+//	int mileage = 2000;
+//	
+//	void steeringWheel() {
+//		int  mileage = 1000;
+//		System.out.println("inside steeringWheel() of Swift "+average+"  "+super.mileage);
+//	}
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		Car car = new Car();     car.tyres();   System.out.println(car.mileage);
+//		
+//		Swift swift = new Swift();  swift.steeringWheel();  swift.tyres();  System.out.println(swift.average);
+//		
+//		
+//	}
+//}
+
+//class Car {
+//	
+//	int mileage = 4000;
+//	
+//	void tyres() {
+//		System.out.println("inside tyres() of Car "+mileage);
+//	}
+//}
+//
+//class Swift extends Car {
+//	
+//	int average = 15;
+//	int mileage = 2000;
+//	
+//	void steeringWheel() {
+//		int  mileage = 1000;
+//		System.out.println("inside steeringWheel() of Swift "+average+"  "+this.mileage);
+//	}
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		Car car = new Car();     car.tyres();   System.out.println(car.mileage);
+//		
+//		Swift swift = new Swift();  swift.steeringWheel();  swift.tyres();  System.out.println(swift.average);
+//		
+//		
+//	}
+//}
+
+//class Car {
+//	
+//	int mileage = 4000;
+//	
+//	void tyres() {
+//		System.out.println("inside tyres() of Car "+mileage);
+//	}
+//}
+//
+//class Swift extends Car {
+//	
+//	int average = 15;
+//	int mileage = 2000;
+//	
+//	void steeringWheel() {
+//		
+//		int mileage = 1000;
+//		System.out.println("inside steeringWheel() of Swift "+average+"  "+mileage);
+//	}
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		Car car = new Car();     car.tyres();   System.out.println(car.mileage);
+//		
+//		Swift swift = new Swift();  swift.steeringWheel();  swift.tyres();  System.out.println(swift.average);
+//		
+//		
+//	}
+//}
+
+//class Car {
+//	
+//	int mileage = 4000;
+//	
+//	void tyres() {
+//		System.out.println("inside tyres() of Car "+mileage);
+//	}
+//}
+//
+//class Swift extends Car {
+//	
+//	int average = 15;
+//	int mileage = 2000;
+//	
+//	void steeringWheel() {
+//		System.out.println("inside steeringWheel() of Swift "+average+"  "+mileage);
+//	}
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		Car car = new Car();     car.tyres();   System.out.println(car.mileage);
+//		
+//		Swift swift = new Swift();  swift.steeringWheel();  swift.tyres();  System.out.println(swift.average);
+//		
+//		
+//	}
+//}
+
+//class Car {
+//	
+//	int i = 4;
+//	
+//	void tyres() {
+//		System.out.println("inside tyres() of Car "+i);
+//	}
+//}
+//
+//class Swift extends Car {
+//	
+//	int j = 5;
+//	
+//	void steeringWheel() {
+//		System.out.println("inside steeringWheel() of Swift "+j+i);
+//	}
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		Car car = new Car();     car.tyres();   System.out.println(car.i);
+//		
+//		Swift swift = new Swift();  swift.steeringWheel();  swift.tyres();  System.out.println(swift.j);
+//		
+//		
+//	}
+//}
+
+//class Car {
+//	
+//	int i = 4;
+//	
+//	void tyres() {
+//		System.out.println("inside tyres() of Car "+i);
+//	}
+//}
+//
+//class Swift extends Car {
+//	
+//	int j = 5;
+//	
+//	void steeringWheel() {
+//		System.out.println("inside steeringWheel() of Swift "+j);
+//	}
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		Car car = new Car();     car.tyres();   System.out.println(car.i);
+//		
+//		Swift swift = new Swift();  swift.steeringWheel();  swift.tyres();  System.out.println(swift.j);
+//		
+//		
+//	}
+//}
+
+//
+//class Car {
+//	
+//	void tyres() {
+//		System.out.println("inside tyres() of Car");
+//	}
+//}
+//
+//class Swift extends Car {
+//	
+//	void steeringWheel() {
+//		System.out.println("inside steeringWheel() of Swift");
+//	}
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		Swift swift = new Swift();   swift.steeringWheel();      swift.tyres();//You can call the members of
+//						//parent as well as child on the object of child class... 
+//		
+//		Car car = new Car();    car.tyres();
+//	}
+//}
+
+//class Car {
+//	
+//	void tyres() {
+//		System.out.println("inside tyres() of Car");
+//	}
+//}
+//
+//class Swift {
+//	
+//	void steeringWheel() {
+//		System.out.println("inside steeringWheel() of Swift");
+//	}
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		Swift swift = new Swift();   swift.steeringWheel();       swift.tyres();//calling swift.tyres() is illegal
+//											//since Swift class does not have tyres() as well as Car is not
+//										//the parent of Swift class...
+//		Car car = new Car();    car.tyres();
+//	}
+//}
+
+//class Aircraft {
+//
+//	int altitude = 0;
+//
+//	int fly() {
+//		altitude = 35000;
+//		return altitude;
+//	}
+//}
+//
+//class Human {
+//
+//	double longitude = 23.45;
+//	double latitude = 6677.23423;
+//	double altitude = 0;
+//
+//	void getAltitude() {
+//		Aircraft aircraft = new Aircraft();
+//		altitude = aircraft.fly();
+//
+//	}
+//
+//	void walk() {
+//
+//		longitude = longitude + 10.00;
+//		latitude = latitude + 4565.23;
+//	}
+//}
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//		Human human = new Human();
+//		System.out.println(human.longitude);
+//		System.out.println(human.latitude);
+//		System.out.println(human.altitude);
+//		
+//		human.getAltitude();   human.walk();
+//		
+//		System.out.println(human.longitude);
+//		System.out.println(human.latitude);
+//		System.out.println(human.altitude);
+//		
+//
+//	}
+//}
+
+//class Arithmetic {
+//	
+//	int i = 4;
+//	
+//	void display() {
+//		
+//		System.out.println(i);
+//		
+//		Day2 day2 = new Day2();
+//		day2.print();
+//	}
+//}
+//
+//public class Day2 {
+//	
+//	int j = 5;
+//
+//	public static void main(String[] args) {
+//		
+//		Arithmetic arithmetic = new Arithmetic();
+//		
+//		arithmetic.display();
+//		
+//	}	
+//	void print() {
+//		System.out.println(j);
+//	}
+//}
+
+//class Arithmetic {
+//	
+//	int i = 4;
+//	
+//	void display() {
+//		
+//		System.out.println(i);
+//	}
+//}
+//
+//public class Day2 {
+//	
+//	int j = 5;
+//
+//	public static void main(String[] args) {
+//		
+//		Arithmetic arithmetic = new Arithmetic();
+//		
+//		arithmetic.display();
+//		
+//		Day2 day2 = new Day2();
+//		
+//		day2.print();
+//	}	
+//	void print() {
+//		System.out.println(j);
+//	}
+//}
+
+//class Arithmetic {
+//	
+//	int i = 4;
+//}
+//
+//public class Day2 {
+//	
+//	int i = 5;
+//
+//	public static void main(String[] args) {
+//		
+//		Arithmetic arithmetic = new Arithmetic();
+//		
+//		System.out.println(arithmetic.i);
+//		
+//		Day2 day2 = new Day2();
+//		
+//		System.out.println(day2.i);
+//
+//	}	
+//}
+
+//class Arithmetic {
+//	
+//	int i = 4;
+//}
+//
+//public class Day2 {
+//	
+//	int j = 5;
+//
+//	public static void main(String[] args) {
+//		
+//		Arithmetic arithmetic = new Arithmetic();
+//		
+//		System.out.println(arithmetic.i);
+//		
+//		Day2 day2 = new Day2();
+//		
+//		System.out.println(day2.j);
+//
+//	}	
+//}
+
+//public class Day2 {
+//	
+//	static int i =4;
+//
+//	public static void main(String[] args) {
+//
+//		add();
+//
+//	}
+//	
+//	static void add() {
+//		
+//		System.out.println(i);//we can access static member inside the static members
+//							//we can access static as well as n0n-static member inside the non-static member...
+//			
+//	}
+//}
+
+//public class Day2 {
+//	
+//	int i =4;
+//
+//	public static void main(String[] args) {
+//
+//		add();
+//
+//	}
+//	
+//	static void add() {
+//		
+//		System.out.println(i);//this is illegal to cal non-static variable inside static method...
+//		
+//		
+//	}
+//
+//}
+
+//public class Day2 {
+//	
+//	
+//
+//	public static void main(String[] args) {
+//
+//		add();
+//
+//	}
+//	
+//	static void add() {
+//		
+//		
+//		
+//		
+//	}
+//
+//}
+
+//public class Day2 {
+//	
+//	int firstNo = 4, secondNo = 5;
+//	static int result;
+//
+//	public static void main(String[] args) {
+//
+//		Day2 obj1 = new Day2();  Day2 obj2 = new Day2();
+//		
+//		obj1.add();
+//		obj2.add();
+//		
+//		System.out.println(result);
+//
+//	}
+//	
+//	void add() {
+//		
+//		int result = 50;
+//		
+//		result = firstNo + secondNo + result;
+//		System.out.println(Day2.result);
+//		
+//		
+//	}
+//
+//}
+
+//public class Day2 {
+//	
+//	int firstNo = 4, secondNo = 5;
+//	static int result;
+//
+//	public static void main(String[] args) {
+//
+//		Day2 obj1 = new Day2();  Day2 obj2 = new Day2();
+//		
+//		obj1.add();
+//		obj2.add();
+//		
+//		System.out.println(result);
+//
+//	}
+//	
+//	void add() {
+//		
+//		int result = 50;
+//		
+//		result = firstNo + secondNo + result;
+//		System.out.println(result);
+//		
+//		
+//	}
+//
+//}
+
+//public class Day2 {
+//	
+//	int firstNo = 4, secondNo = 5;
+//	static int result;
+//
+//	public static void main(String[] args) {
+//
+//		Day2 obj1 = new Day2();  Day2 obj2 = new Day2();
+//		
+//		obj1.add();
+//		obj2.add();
+//		
+//		System.out.println(result);
+//
+//	}
+//	
+//	void add() {
+//		
+//		result = firstNo + secondNo + result;
+//		
+//		
+//	}
+//
+//}
+
+//public class Day2 {
+//	
+//	static int firstNo = 4;
+//
+//	public static void main(String[] args) {
+//
+//		System.out.println( firstNo );
+//
+//	}
+//}
+
+//public class Day2 {
+//	
+//	int height = 1;
+//	int aptitude = 20;
+//	int mascularStrength = 10;
+//	int firstNo = 4, secondNo = 5, result;
+//
+//	public static void main(String[] args) {
+//
+//		Day2 obj1 = new Day2();
+//		System.out.println(obj1.height);
+//		System.out.println(obj1.aptitude);
+//		System.out.println(obj1.mascularStrength);
+//		System.out.println(obj1.firstNo);
+//		System.out.println(obj1.secondNo);
+//		System.out.println(obj1.result);
+//		
+//		obj1.studying();      obj1.gyming();   obj1.gyming();     obj1.gyming();
+//		
+//		System.out.println("after calling methods....");
+//		
+//		System.out.println(obj1.height);
+//		System.out.println(obj1.aptitude);
+//		System.out.println(obj1.mascularStrength);
+//		System.out.println(obj1.firstNo);
+//		System.out.println(obj1.secondNo);
+//		System.out.println(obj1.result);
+//
+//	}
+//	
+//	void playingBasketball() {
+//		
+//		height++;
+//	}
+//	void gyming() {
+//		mascularStrength++;
+//	}
+//	void studying() {
+//		aptitude++;
+//	}
+//
+//	void add( ) {
+//		result = firstNo + secondNo;
+//	}
+//
+//}
+
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//
+//		Day2 day2 = new Day2();
+//		
+//		int returnedValue = day2.add(35, 65);
+//		
+//		System.out.println(returnedValue);
+//
+//	}
+//
+//	int add( int value1, int value2 ) {
+//		
+//		int result = value1 + value2;
+//
+//		return result;
+//
+//	}
+//
+//}
+
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//
+//		Day2 day2 = new Day2();
+//		
+//		day2.add(35, 65);
+//
+//	}
+//
+//	void add( int value1, int value2 ) {
+//		
+//		int result = value1 + value2;
+//
+//		System.out.println("Inside add().... "+result);
+//
+//	}
+//
+//}
+
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//
+//		Day2 day2 = new Day2();
+//		
+//		day2.add(35, 65);
+//
+//	}
+//
+//	void add( int value1, int value2 ) {
+//
+//		System.out.println("Inside add()....");
+//
+//	}
+//
+//}
+
+//public class Day2 {
+//	
+//	int i = 4, j = 5, k;
+//
+//	public static void main(String[] args) {
+//
+//		Day2 day2 = new Day2();
+//
+//		int returnedValue =  day2.add();
+//		
+//		System.out.println(day2.k);
+//		
+//		System.out.println( returnedValue );
+//
+//	}
+//
+//	int add() {
+//
+//		int value = 100;
+//
+//		value = i * value + j * i;
+//		
+//		return value;
+//
+//	}
+//
+//}
+
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//
+//		Day2 day2 = new Day2();
+//
+//		int returnedValue = day2.add();
+//		
+//		System.out.println("The returned Value is "+returnedValue);
+//
+//	}
+//
+//	int add() {
+//
+//		int value = 100;
+//
+//		System.out.println("I am from add() " + value);
+//
+//		return value;
+//
+//	}
+//
+//}
+
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//
+//		Day2 day2 = new Day2();
+//
+//		day2.add();
+//
+//	}
+//
+//	int add() {
+//
+//		int value = 100;
+//
+//		System.out.println("I am from add() " + value);
+//
+//		return value;//return statement must be the last statement...
+//
+//	}
+//
+//}

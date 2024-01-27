@@ -1,0 +1,468 @@
+
+class Aircraft {
+
+	int altitude = 0;
+
+	int fly() {
+		altitude = 35000;
+		return altitude;
+	}
+}
+
+class Human {
+
+	double longitude = 23.45;
+	double latitude = 6677.23423;
+	double altitude = 0;
+
+	void getAltitude() {
+		Aircraft aircraft = new Aircraft();
+		altitude = aircraft.fly();
+
+	}
+
+	void walk() {
+
+		longitude = longitude + 10.00;
+		latitude = latitude + 4565.23;
+	}
+}
+
+public class Day2 {
+
+	public static void main(String[] args) {
+
+	}
+
+}
+
+//class Arithmetic {
+//	
+//	int i = 4;
+//	
+//	void display() {
+//		
+//		System.out.println(i);
+//		
+//		Day2 day2 = new Day2();
+//		day2.print();
+//	}
+//}
+//
+//public class Day2 {
+//	
+//	int j = 5;
+//
+//	public static void main(String[] args) {
+//		
+//		Arithmetic arithmetic = new Arithmetic();
+//		
+//		arithmetic.display();
+//		
+//	}	
+//	void print() {
+//		System.out.println(j);
+//	}
+//}
+
+//class Arithmetic {
+//	
+//	int i = 4;
+//	
+//	void display() {
+//		
+//		System.out.println(i);
+//	}
+//}
+//
+//public class Day2 {
+//	
+//	int j = 5;
+//
+//	public static void main(String[] args) {
+//		
+//		Arithmetic arithmetic = new Arithmetic();
+//		
+//		arithmetic.display();
+//		
+//		Day2 day2 = new Day2();
+//		
+//		day2.print();
+//	}	
+//	void print() {
+//		System.out.println(j);
+//	}
+//}
+
+//class Arithmetic {
+//	
+//	int i = 4;
+//}
+//
+//public class Day2 {
+//	
+//	int i = 5;
+//
+//	public static void main(String[] args) {
+//		
+//		Arithmetic arithmetic = new Arithmetic();
+//		
+//		System.out.println(arithmetic.i);
+//		
+//		Day2 day2 = new Day2();
+//		
+//		System.out.println(day2.i);
+//
+//	}	
+//}
+
+//class Arithmetic {
+//	
+//	int i = 4;
+//}
+//
+//public class Day2 {
+//	
+//	int j = 5;
+//
+//	public static void main(String[] args) {
+//		
+//		Arithmetic arithmetic = new Arithmetic();
+//		
+//		System.out.println(arithmetic.i);
+//		
+//		Day2 day2 = new Day2();
+//		
+//		System.out.println(day2.j);
+//
+//	}	
+//}
+
+//public class Day2 {
+//	
+//	static int i =4;
+//
+//	public static void main(String[] args) {
+//
+//		add();
+//
+//	}
+//	
+//	static void add() {
+//		
+//		System.out.println(i);//we can access static member inside the static members
+//							//we can access static as well as n0n-static member inside the non-static member...
+//			
+//	}
+//}
+
+//public class Day2 {
+//	
+//	int i =4;
+//
+//	public static void main(String[] args) {
+//
+//		add();
+//
+//	}
+//	
+//	static void add() {
+//		
+//		System.out.println(i);//this is illegal to cal non-static variable inside static method...
+//		
+//		
+//	}
+//
+//}
+
+//public class Day2 {
+//	
+//	
+//
+//	public static void main(String[] args) {
+//
+//		add();
+//
+//	}
+//	
+//	static void add() {
+//		
+//		
+//		
+//		
+//	}
+//
+//}
+
+//public class Day2 {
+//	
+//	int firstNo = 4, secondNo = 5;
+//	static int result;
+//
+//	public static void main(String[] args) {
+//
+//		Day2 obj1 = new Day2();  Day2 obj2 = new Day2();
+//		
+//		obj1.add();
+//		obj2.add();
+//		
+//		System.out.println(result);
+//
+//	}
+//	
+//	void add() {
+//		
+//		int result = 50;
+//		
+//		result = firstNo + secondNo + result;
+//		System.out.println(Day2.result);
+//		
+//		
+//	}
+//
+//}
+
+//public class Day2 {
+//	
+//	int firstNo = 4, secondNo = 5;
+//	static int result;
+//
+//	public static void main(String[] args) {
+//
+//		Day2 obj1 = new Day2();  Day2 obj2 = new Day2();
+//		
+//		obj1.add();
+//		obj2.add();
+//		
+//		System.out.println(result);
+//
+//	}
+//	
+//	void add() {
+//		
+//		int result = 50;
+//		
+//		result = firstNo + secondNo + result;
+//		System.out.println(result);
+//		
+//		
+//	}
+//
+//}
+
+//public class Day2 {
+//	
+//	int firstNo = 4, secondNo = 5;
+//	static int result;
+//
+//	public static void main(String[] args) {
+//
+//		Day2 obj1 = new Day2();  Day2 obj2 = new Day2();
+//		
+//		obj1.add();
+//		obj2.add();
+//		
+//		System.out.println(result);
+//
+//	}
+//	
+//	void add() {
+//		
+//		result = firstNo + secondNo + result;
+//		
+//		
+//	}
+//
+//}
+
+//public class Day2 {
+//	
+//	static int firstNo = 4;
+//
+//	public static void main(String[] args) {
+//
+//		System.out.println( firstNo );
+//
+//	}
+//}
+
+//public class Day2 {
+//	
+//	int height = 1;
+//	int aptitude = 20;
+//	int mascularStrength = 10;
+//	int firstNo = 4, secondNo = 5, result;
+//
+//	public static void main(String[] args) {
+//
+//		Day2 obj1 = new Day2();
+//		System.out.println(obj1.height);
+//		System.out.println(obj1.aptitude);
+//		System.out.println(obj1.mascularStrength);
+//		System.out.println(obj1.firstNo);
+//		System.out.println(obj1.secondNo);
+//		System.out.println(obj1.result);
+//		
+//		obj1.studying();      obj1.gyming();   obj1.gyming();     obj1.gyming();
+//		
+//		System.out.println("after calling methods....");
+//		
+//		System.out.println(obj1.height);
+//		System.out.println(obj1.aptitude);
+//		System.out.println(obj1.mascularStrength);
+//		System.out.println(obj1.firstNo);
+//		System.out.println(obj1.secondNo);
+//		System.out.println(obj1.result);
+//
+//	}
+//	
+//	void playingBasketball() {
+//		
+//		height++;
+//	}
+//	void gyming() {
+//		mascularStrength++;
+//	}
+//	void studying() {
+//		aptitude++;
+//	}
+//
+//	void add( ) {
+//		result = firstNo + secondNo;
+//	}
+//
+//}
+
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//
+//		Day2 day2 = new Day2();
+//		
+//		int returnedValue = day2.add(35, 65);
+//		
+//		System.out.println(returnedValue);
+//
+//	}
+//
+//	int add( int value1, int value2 ) {
+//		
+//		int result = value1 + value2;
+//
+//		return result;
+//
+//	}
+//
+//}
+
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//
+//		Day2 day2 = new Day2();
+//		
+//		day2.add(35, 65);
+//
+//	}
+//
+//	void add( int value1, int value2 ) {
+//		
+//		int result = value1 + value2;
+//
+//		System.out.println("Inside add().... "+result);
+//
+//	}
+//
+//}
+
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//
+//		Day2 day2 = new Day2();
+//		
+//		day2.add(35, 65);
+//
+//	}
+//
+//	void add( int value1, int value2 ) {
+//
+//		System.out.println("Inside add()....");
+//
+//	}
+//
+//}
+
+//public class Day2 {
+//	
+//	int i = 4, j = 5, k;
+//
+//	public static void main(String[] args) {
+//
+//		Day2 day2 = new Day2();
+//
+//		int returnedValue =  day2.add();
+//		
+//		System.out.println(day2.k);
+//		
+//		System.out.println( returnedValue );
+//
+//	}
+//
+//	int add() {
+//
+//		int value = 100;
+//
+//		value = i * value + j * i;
+//		
+//		return value;
+//
+//	}
+//
+//}
+
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//
+//		Day2 day2 = new Day2();
+//
+//		int returnedValue = day2.add();
+//		
+//		System.out.println("The returned Value is "+returnedValue);
+//
+//	}
+//
+//	int add() {
+//
+//		int value = 100;
+//
+//		System.out.println("I am from add() " + value);
+//
+//		return value;
+//
+//	}
+//
+//}
+
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//
+//		Day2 day2 = new Day2();
+//
+//		day2.add();
+//
+//	}
+//
+//	int add() {
+//
+//		int value = 100;
+//
+//		System.out.println("I am from add() " + value);
+//
+//		return value;//return statement must be the last statement...
+//
+//	}
+//
+//}

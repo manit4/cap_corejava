@@ -1,0 +1,62 @@
+
+public class Day1 {
+	
+	int firstNo = 4;
+	int secondNo = 5;
+	int result = firstNo + secondNo;
+	
+	public static void main(String[] args) {
+		
+		Day1 tripti = new Day1();
+		
+		
+		System.out.println( tripti.result );
+	}
+
+}
+
+
+
+//public class Day1 {
+//	
+//	public static void main(String[] args) {
+//		
+//		int firstNo = 4;
+//		int secondNo = 5;
+//		int result = firstNo + secondNo;
+//		
+//		System.out.println( result );
+//	}
+//
+//}
+
+
+//public class Day1 {
+//	
+//	int i = 4;
+//	
+//	public static void main(String[] args) {
+//		
+//		Day1 day1 = new Day1();
+//		
+//		int j = 5;
+//		
+//		System.out.println(day1.i);
+//		System.out.println(j);
+//	}
+//
+//}
+
+
+//public class Day1 {
+//	
+//	int i = 4;
+//	
+//	public static void main(String[] args) {
+//		
+//		Day1 day1 = new Day1();
+//		
+//		System.out.println(day1.i);
+//	}
+//
+//}

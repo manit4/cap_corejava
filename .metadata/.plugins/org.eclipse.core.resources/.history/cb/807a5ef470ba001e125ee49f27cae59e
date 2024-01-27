@@ -1,0 +1,99 @@
+
+public class Day2 {
+
+	public static void main(String[] args) {
+
+		Day2 day2 = new Day2();
+		
+		day2.add(0, 0);
+
+	}
+
+	void add( int value1, int value2 ) {
+
+		System.out.println("Inside add()....");
+
+	}
+
+}
+
+
+
+//public class Day2 {
+//	
+//	int i = 4, j = 5, k;
+//
+//	public static void main(String[] args) {
+//
+//		Day2 day2 = new Day2();
+//
+//		int returnedValue =  day2.add();
+//		
+//		System.out.println(day2.k);
+//		
+//		System.out.println( returnedValue );
+//
+//	}
+//
+//	int add() {
+//
+//		int value = 100;
+//
+//		value = i * value + j * i;
+//		
+//		return value;
+//
+//	}
+//
+//}
+
+
+
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//
+//		Day2 day2 = new Day2();
+//
+//		int returnedValue = day2.add();
+//		
+//		System.out.println("The returned Value is "+returnedValue);
+//
+//	}
+//
+//	int add() {
+//
+//		int value = 100;
+//
+//		System.out.println("I am from add() " + value);
+//
+//		return value;
+//
+//	}
+//
+//}
+
+
+
+
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//
+//		Day2 day2 = new Day2();
+//
+//		day2.add();
+//
+//	}
+//
+//	int add() {
+//
+//		int value = 100;
+//
+//		System.out.println("I am from add() " + value);
+//
+//		return value;//return statement must be the last statement...
+//
+//	}
+//
+//}

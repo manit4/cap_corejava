@@ -1,0 +1,30 @@
+
+public class Day1 {
+	
+	int i = 4;
+	
+	public static void main(String[] args) {
+		
+		Day1 day1 = new Day1();
+		
+		int j = 5;
+		
+		System.out.println(day1.i);
+		System.out.println(j);
+	}
+
+}
+
+
+//public class Day1 {
+//	
+//	int i = 4;
+//	
+//	public static void main(String[] args) {
+//		
+//		Day1 day1 = new Day1();
+//		
+//		System.out.println(day1.i);
+//	}
+//
+//}
