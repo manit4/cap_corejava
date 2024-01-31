@@ -1,23 +1,21 @@
-
-
 import java.util.Scanner;
 
-public class Day2 {
-
-	public static void main(String[] args) {
-		
-	Scanner sc = new Scanner(System.in);
-	
-	System.out.println("Enter your age");
-	
-	int age = sc.nextInt();
-	
-	System.out.println("the entered age is "+age);
-	
-	
-		
-	}
-}
+//import java.util.Scanner;
+//
+//public class Day2 {
+//
+//	public static void main(String[] args) {
+//		
+//	Scanner sc = new Scanner(System.in);
+//	
+//	System.out.println("Enter your age");
+//	
+//	int age = sc.nextInt();
+//	
+//	System.out.println("the entered age is "+age);
+//			
+//	}
+//}
 
 //import java.util.Scanner;
 //
@@ -35,8 +33,6 @@ public class Day2 {
 //		
 //	}
 //}
-
-
 
 //class A {
 //	
@@ -69,7 +65,6 @@ public class Day2 {
 //	}
 //}
 
-
 //interface A {//you can have implemented methods in interface java 1.8 onwards and that i done with the
 //				//help of static or default keywords
 //	
@@ -94,7 +89,6 @@ public class Day2 {
 //	}
 //}
 
-
 //interface A {
 //	
 //	int i = 5;//you have to assign some value to interface  variable since it is public static and final...
@@ -111,8 +105,6 @@ public class Day2 {
 //		
 //	}
 //}
-
-
 
 //interface A {
 //	
@@ -152,7 +144,6 @@ public class Day2 {
 //	}
 //}
 
-
 //interface A {
 //	
 //	void add();
@@ -191,8 +182,6 @@ public class Day2 {
 //	}
 //}
 
-
-
 //interface A {//All your methods should be un-implemented, you can not create object of interface  but
 //				//you can object of its implementation in the reference variable of interface type... 
 //	
@@ -227,9 +216,6 @@ public class Day2 {
 //	}
 //}
 
-
-
-
 //abstract class Car {
 //	
 //	void steringWheel() {
@@ -240,7 +226,7 @@ public class Day2 {
 //	abstract void radio();
 //}
 //
-//abstract class Polo extends Car {
+//class Polo extends Car {
 //
 //	void ac() {
 //		
@@ -265,10 +251,9 @@ public class Day2 {
 //	public static void main(String[] args) {
 //		
 //		PoloGT gt = new PoloGT();
-//		Polo polo = new PoloGT();
+//		Polo polo = new Polo();
 //	}
 //}
-
 
 //abstract class Car {
 //	
@@ -302,8 +287,6 @@ public class Day2 {
 //	}
 //}
 
-
-
 //abstract class Car {//Abstract is a keyword which is used with the class and with method...
 //					//abstract method says, you must not have body to method...
 //					//you can have implemented as well as  un-implemented method in the abstract class
@@ -328,9 +311,6 @@ public class Day2 {
 //	}
 //}
 
-
-
-
 //abstract class Car {//Abstract is a keyword which is used with the class and with method...
 //					//abstract method says, you must not have body to method...
 //					//you can have implemented as well as  un-implemented method in the abstract class
@@ -352,8 +332,6 @@ public class Day2 {
 //		
 //	}
 //}
-
-
 
 //
 //class Arithmetic {//here, in over-loading, method name must be same in a class and argument list 
@@ -388,7 +366,6 @@ public class Day2 {
 //	}
 //}
 
-
 //class Swift {
 //	
 //	final int i = 10;//final variable can not be left un-initialized "final int i;" is not possible...
@@ -408,8 +385,6 @@ public class Day2 {
 //		
 //	}
 //}
-
-
 
 //final class Car {
 //	
@@ -442,9 +417,6 @@ public class Day2 {
 //	}
 //}
 
-
-
-
 //class Car {
 //	
 //	void abc( ) {
@@ -475,7 +447,6 @@ public class Day2 {
 //		
 //	}
 //}
-
 
 //class Car {
 //	
@@ -508,12 +479,62 @@ public class Day2 {
 //	}
 //}
 
+public class Day2 {
 
-//public class Day2 {
-//
-//	public static void main(String[] args) {
-//
+	public static void main(String[] args) {
+
+		Scanner in = new Scanner(System.in);
+
+		int a = in.nextInt();
+		in.nextLine();
+
+		int[][] arr = new int[a][a];
+
+		for (int i = 0; i < 3; i++) {
+			
+			System.out.println("inside outer "+i);
+			
+			String value = in.nextLine();
+			for (int j = 0, k = 0; k < value.length(); j++, k++) {
+				System.out.println("Value is "+value.charAt(k)+" and the i is "+i);
+				arr[i][j] = value.charAt(k);
+				k++;
+			}
+			
+			System.out.println("after inner loop "+i);
+		}
+		
+
+
+		int[][] newArr = new int[a][a];
+
+		for (int i = 0; i < arr.length; i++) {
+
+			for (int j = 0; j < arr.length; j++) {
+
+				newArr[j][i] = arr[i][j];
+			}
+
+		}
+
+		for (int i = 0; i < arr.length; i++) {
+
+			for (int j = 0; j < arr.length; j++) {
+
+				System.out.print((char)newArr[i][j]);
+				if (j != arr.length - 1) {
+					System.out.print(" ");
+				}
+
+			}
+			System.out.println();
+
+		}
+
 //		int arr[][] = { { 1, 1, 1 }, { 2, 2, 2 }, { 3, 3, 3 } };
+//		
+//		Scanner sc = new Scanner(System.in);
+//		sc.nextLine();
 //
 //		int[][] newArr = new int[3][3];
 //
@@ -535,8 +556,9 @@ public class Day2 {
 //			System.out.println();
 //			
 //		}
-//	}
-//}
+
+	}
+}
 
 //class Car {
 //	
